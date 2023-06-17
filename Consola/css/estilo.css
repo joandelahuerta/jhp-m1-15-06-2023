@@ -1,98 +1,227 @@
-.consola{
+@font-face {
+    font-family: gbafont;
+    src: url(../font/FuturaPTBold.otf);
+}
+body{
+    background-image: url(../img/background.png);
+}
+/* CONSOLA CERRADA */
+.consolacerrada{
     display: flex;
+    width: 100vw;
+    height: 600px;
+    top: 298px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.tapa{
+    background-color:#61605B;
+    height: 305px;
+    width: 300px;    
+    border-radius: 5%;
+    position: absolute;
+    box-shadow: 5px 10px 18px #888888;
+}
+/* MECANISMO CON LA TAPA CERRADA */
+.tapapartesuperior{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
+    height: 35px;
+    width: 300px;
+    border-radius: 15px;
+}
+.tapapartesuperiorizquierda{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
+    height: 33px;
+    width: 19px; 
+    border-style: solid;
+    border-width: 1px;
+}
+.tapapartesuperiorizquierda2{
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    background: linear-gradient(0deg, rgba(55,55,55,1) 0%, #CACBC6 51%);
+    height: 33px;
+    width: 108px; 
+    border-style: solid;
+    border-width: 1px;
+}
+.tapapartesuperiorderecha{
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
+    height: 33px;
+    width: 19px;
+    border-style: solid;
+    border-width: 1px; 
+}
+/* EL DIBUJO DE LA TAPA */
+.tapaartwork{
+    background: linear-gradient(0deg, rgba(55,55,55,1) 0%, #CACBC6 51%);
+    left: 0px;
+    top: 33px;
+    height: 271px;
+    width: 300px;    
+    border-radius: 5%;
+    position: absolute;
+}
+.tapalogo{
+    position: absolute;
+    width: 270px;
+    left: 20px;
+    top: 80px;
+}
+/* NINTENDO LOGO */
+.nintendologo{
+    position: absolute;
+    width: 150px;
+    left: 75px;
+    top: 240px;
+}
+/* CONSOLA ABIERTA */
+.consola{
     width: 100vw;
     height: 600px;
     justify-content: center;
     align-items: center;
     position: fixed;
+    display: none;
 }
 /* Parte de arriba de la gameboy */
 .carcasapantalla{
-    background-color:#61605B;
-    height: 265px; /* 570 TODA LA CONSOLA */
-    width: 330px;    
+    background: linear-gradient(240deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 20%);
+    height: 265px;
+    width: 300px;    
     border-radius: 5%;
-    /* box-shadow: 18px 21px 33px 0px rgba(0,0,0,0.63); */
+    position: absolute;
 }
 /* GOMAS DE PROTECCION EN GRID */
 .gomitas{
     display: grid;
     height: 20px;
-    gap: 260px;
+    gap: 205px;
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr; 
 }
 .gomita{
     position: relative;
     top: 5px;
-    left: 8px;
+    left: 14px;
     background-color:#252421;
     height: 20px;
     width: 20px;  
     border-radius: 100%;
 }
-.marco{
+.nogomitas{
+    display: grid;
+    height: 20px;
+    gap: 205px;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+}
+.nogomita{
     position: relative;
-    top: 10px;
+    top: 218px;
+    left: 14px;
+    border-style: solid;
+    border-width: 1px;
+    height: 20px;
+    width: 20px;  
+    border-radius: 100%;
+}
+.nogomitacentro{
+    position: relative;
+    bottom: 35px;
+    left: 140px;
+    border-style: solid;
+    border-width: 1px;
+    height: 20px;
+    width: 20px;  
+    border-radius: 100%;
+}
+/* PANTALLA CONSOLA */
+.marco{
+    position: absolute;
+    top: 30px;
     left: 25px;
     background-color:#252421;
     height: 200px;
-    width: 280px;    
+    width: 250px;    
 }
 .pantalla{
-    position: relative;
+    position: absolute;
     top: 10px;
     left: 10px;
     background-color:#554641;
     height: 170px;
-    width: 260px;    
+    width: 230px;    
+}
+/* Juego al pasar por encima */
+.juego{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 170px;
+    width: 230px; 
+    opacity: 0;   
+}
+.juego:hover{
+    opacity: 1;
 }
 .logo{
-    position: relative;
-    top: 11px;
-    left: 90px;
+    position: absolute;
+    top: 185px;
+    left: 75px;
     height: 10px;
 }
 /* Parte del mecanismo de la gameboy */
-.mecanismoizquierda{
-    position: relative;
-    top: 45px;
-    left: 25px;
-    background: linear-gradient(180deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
-    height: 5px;
-    width: 140px;    
-}
-.mecanismoderecha{
-    position: relative;
-    top: 0px;
-    left: 250px;
-    background: linear-gradient(180deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
-    height: 5px;
-    width: 20px; 
-}
-.mecanismocentral{
-    position: relative;
-    top: 45px;
+.mecanismo{
+    position: absolute;
+    top: 270px;
     left: 0px;
     background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
     height: 25px;
-    width: 330px;
+    width: 300px;
     border-radius: 15px 15px 0px 0px;
 }
+.mecanismoizquierda{
+    position: absolute;
+    top: -5px;
+    left: 40px;
+    background: linear-gradient(180deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
+    height: 5px;
+    width: 110px;    
+}
+.mecanismoderecha{
+    position: absolute;
+    top: -5px;
+    left: 250px;
+    background: linear-gradient(180deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
+    height: 5px;
+    width: 21px; 
+}
 .mecanismoizquierdaabajo{
-    position: relative;
-    top: 20px;
-    left: 25px;
+    position: absolute;
+    left: 40px;
+    top: 0px;
     background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
     height: 23px;
-    width: 139px; 
+    width: 108px; 
     border-style: solid;
     border-width: 1px;
 }
 .mecanismoderechaabajo{
-    position: relative;
-    top: 0px;
+    position: absolute;
     left: 250px;
+    top: 0px;
     background: linear-gradient(0deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 51%);
     height: 23px;
     width: 19px;
@@ -101,20 +230,20 @@
 }
 /* Parte de los botones */
 .carcasabotones{
-    position: relative;
-    top: 19px;
+    position: absolute;
+    top: 295px;
     left: 0px;
-    background-color:#61605B;
-    height: 270px; /* 570 TODA LA CONSOLA */
-    width: 330px;    
-    border-radius: 0px 0px 15px 15px;
-    
+    background: linear-gradient(20deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 21%);
+    height: 280px;
+    width: 300px;    
+    border-radius: 0px 0px 15px 15px; 
+    box-shadow: 5px 10px 18px #888888;
 }
 /* Boton del brillo */
 .botonbrillo{
-    position: relative;
+    position: absolute;
     top: 15px;
-    left: 155px;
+    left: 145px;
     background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 3%);
     height: 20px;
     width: 20px;  
@@ -123,23 +252,53 @@
     border-width: 1px; 
 }
 .brillo{
-    position: relative;
+    position: absolute;
     height: 15px;
     width: 15px; 
-    top: 2.5px;
-    left: 2.45px;
+    top: 2px;
+    left: 2.2px;
+}
+/* LEDS */
+.ledencendido{
+    position: absolute;
+    top: 25px;
+    left: 292px;
+    background-color:#72716e;
+    height: 5px;
+    width: 5px;  
+    border-style: solid;
+    border-width: 1px; 
+}
+.ledcarga{
+    position: absolute;
+    top: 45px;
+    left: 292px;
+    background-color:#72716e;
+    height: 5px;
+    width: 5px;  
+    border-style: solid;
+    border-width: 1px; 
+}
+/* ALTAVOZ */
+.altavoz{
+    position: absolute;
+    top: 130px;
+    left: 100px;
+}
+.altavozimg{
+    width: 100px;
 }
 /* Cruzeta y Botones */
 .controles{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 120px;
 }
 /* Cruzeta */
 .cruzeta{
-    position: relative;
-    top: 35px;
+    position: absolute;
+    top: 5px;
     left: 25px;
     background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
     height: 100px;
@@ -149,7 +308,7 @@
     border-width: 1px; 
 }
 .cruzetacontorno1{
-    position: relative;
+    position: absolute;
     top: 12px;
     left: 38px;
     background-color:#000000;
@@ -158,36 +317,36 @@
     border-radius: 5px;
 }
 .cruzetacontorno2{
-    position: relative;
-    top: 25px;
-    right: 25px;
+    position: absolute;
+    top: 38px;
+    left: 12px;
     background-color:#000000;
     height: 24px;
     width: 74px; 
     border-radius: 5px;
 }
 .cruzeta1{
-    position: relative;
-    bottom: 60px;
-    left: 40px;
+    position: absolute;
+    top: 13px;
+    left: 39px;
     background-color: #252421;
     height: 70px;
     width: 20px; 
     border-radius: 5%;
 }
 .cruzeta2{
-    position: relative;
-    top: 25px;
-    right: 25px;
+    position: absolute;
+    top: 39px;
+    left: 13px;
     background-color: #252421;
     height: 20px;
     width: 70px; 
     border-radius: 5%;
 }
 .cruzetacentro{
-    position: relative;
-    top: -2px;
-    left: 23px;
+    position: absolute;
+    top: 37px;
+    left: 37px;
     background: linear-gradient(294deg, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 90%);
     height: 22px;
     width: 22px; 
@@ -197,9 +356,9 @@
 }
 /* Botones */
 .botones{
-    position: relative;
-    top: 60px;
-    left: 25px;
+    position: absolute;
+    top: 35px;
+    left: 180px;
     background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
     height: 45px;
     width: 100px;  
@@ -209,7 +368,7 @@
     transform: rotate(-15deg);  
 }
 .botonB{
-    position: relative;
+    position: absolute;
     top: 7px;
     left: 5px;
     background-color: #252421;
@@ -219,9 +378,18 @@
     border-style: solid;
     border-width: 1px; 
 }
+.botonBtext{
+    font-family: gbafont;
+    font-size: 20px;
+    position: absolute;
+    width: 20px; 
+    top: 33px;
+    left: 197px;
+    color: linear-gradient(294deg, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 90%);
+}
 .botonA{
-    position: relative;
-    bottom: 26px;
+    position: absolute;
+    bottom: 8px;
     left: 62px;
     background-color: #252421;
     height: 30px;
@@ -230,43 +398,103 @@
     border-style: solid;
     border-width: 1px;
 }
+.botonAtext{
+    font-family: gbafont;
+    font-size: 20px;
+    position: absolute;
+    width: 20px; 
+    top: 17px;
+    left: 250px;
+    color: linear-gradient(294deg, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 90%);
+}
+/* Artwork y SELECT/START */
+.extras{
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    height: 95px;
+}
+/* Dibujos Consola */
 .artwork1{
-    position: relative;
-    top: 40px;
+    position: absolute;
+    top: -5px;
     width: 100px;
     height: 100px;
 }
 .artwork1img{
 height:100px;
 }
-.select{
-    position: relative;
-    left: 130px;
-    background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
-    height: 20px;
-    width: 20px;  
-    border-radius: 50px;
-    border-style: solid;
-    border-width: 1px;
-}
-.start{
-    position: relative;
-    left: 45px;
-    background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
-    height: 20px;
-    width: 20px;  
-    border-radius: 50px;
-    border-style: solid;
-    border-width: 1px;
-}
 .artwork2{
-    position: relative;
-    bottom: 105px;
-    left: 230px;
+    position: absolute;
+    top: -5px;
+    left: 200px;
     width: 100px;
     height: 100px;
 }
 .artwork2img{
 height:100px;
 transform: scaleX(-1);
+}
+/* Botones extra */
+.selectborde{
+    position: absolute;
+    left: 110px;
+    top: 50px;
+    background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
+    height: 25px;
+    width: 25px;  
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+}
+.select{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background-color: #252421;
+    height: 15px;
+    width: 15px;  
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+}
+.botonSelecttext{
+    font-family: gbafont;
+    font-size: 10px;
+    position: absolute;
+    width: 20px; 
+    top: 20px;
+    left: 110px;
+    color: linear-gradient(294deg, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 90%);
+}
+.startborde{
+    position: absolute;
+    left: 160px;
+    top: 50px;
+    background: linear-gradient(315deg, rgba(55,55,55,1) 0%, rgba(87,86,81,1) 5%);
+    height: 25px;
+    width: 25px;  
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+}
+.start{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background-color: #252421;
+    height: 15px;
+    width: 15px;  
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+}
+.botonStarttext{
+    font-family: gbafont;
+    font-size: 10px;
+    position: absolute;
+    width: 20px; 
+    top: 20px;
+    left: 160px;
+    color: linear-gradient(294deg, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 90%);
 }
