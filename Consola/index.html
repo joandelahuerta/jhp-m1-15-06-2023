@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
     <script src="./js/gba.js"></script>
-    <title>Document</title>
+    <title>GameBoy Advance SP</title>
 
 </head>
 <body>
+    <!-- SONIDO DE FONDO -->
     <audio loop autoplay id="backgroundost" onloadeddata="setHalfVolume()">
         <source src="./music/dearlybeloved.mp3">
     </audio>
+    <!-- CONSOLA CERRADA -->
     <div class="consolacerrada" id="closeconsole" onclick="openConsole()">
+        <!-- TAPA -->
         <div class="tapa">
             <div class="tapapartesuperior">
                 <div class="tapapartesuperiorizquierda2"></div>

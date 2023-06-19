@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/gba.js"></script>
+    <title>Nintendo Switch Pro Controller</title>
+</head>
+<body>
+    <audio loop autoplay id="backgroundost" onloadeddata="setHalfVolume()">
+        <source src="./music/maintheme.mp3">
+    </audio>
+    <!-- Mando -->
+    <div class="mando">      
+        <div class="mandocentro">
+            <img src="./img/nslogo.png" class="switchlogo">
+            <div class="gatillos">
+                <div class="l1"></div>
+                <div class="r1"></div>
+            </div>
+            <!-- Dibujo xenoblade -->
+            <div class="artwork">
+                <div class="artwork1"></div>
+                <div class="artwork2"></div>
+            </div>
+            <!-- Botones como select y más -->
+            <div class="botonesextra">
+                <div class="select"><p class="botonSelecttext">-</p></div>
+                <div class="start"><p class="botonStarttext">+</p></div>
+                <div class="foto">
+                    <div class="fotointerior"></div>
+                </div>
+                <div class="home"><img src="./img/home.png" class="homeicon"></div>
+            </div>
+            <!-- Los joysticks -->
+            <div class="joystickcontornoizquierdo">
+                <div class="joystickizquierdo">
+                    <div class="joystickcentroizquierdo"></div>
+                </div>
+            </div>
+            <div class="joystickcontornoderecho">
+                <div class="joystickderecho">
+                    <div class="joystickcentroderecho"></div>
+                </div>
+            </div>
+            <!-- Cruzeta con iconos -->
+            <div class="cruzeta">
+                <div class="cruzetacontorno1"></div>
+                <div class="cruzetacontorno2"></div>
+                <div class="cruzeta1">
+                    <div class="flechaup"></div>
+                    <div class="flechadown"></div>
+                </div>
+                <div class="cruzeta2">
+                    <div class="flechaleft"></div>
+                    <div class="flecharight"></div>
+                </div>
+            </div>
+            <!-- Botones A B Y X -->
+            <div class="botones">
+                <div class="botonX"><p class="botonXtext">X</p></div>
+                <div class="botonA"><p class="botonAtext">A</p></div>
+                <div class="botonB"><p class="botonBtext">B</p></div>
+                <div class="botonY"><p class="botonYtext">Y</p></div>
+            </div>
+            <!-- Botones gatillos -->
+            <div class="mandogripizquierdo"></div>
+            <div class="mandogripderecho"></div>
+        </div>
+    </div>
+</body>
+</html>
